@@ -15,6 +15,7 @@ def szyfruj_cezar(tekst, klucz):
 
 
 def deszyfruj_cezar(szyfrogram, klucz):
+    tekst = ""
     pass
     return tekst
 
