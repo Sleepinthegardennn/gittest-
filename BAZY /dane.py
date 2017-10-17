@@ -25,12 +25,13 @@ def wyczysc_dane(dane, pole):
     
 
 def main(args):
-    dane = dane_z_pliku('pracownicy.txt')
-    pracownicy = wyczysc_dane(dane, 5)
+    pracownicy = dane_z_pliku('pracownicy.txt')
+    pracownicy = wyczysc_dane(pracownicy, 5)
     premia = dane_z_pliku('premia.txt')
-    premia = wyczysc_dane(dane, 1)
-    print(premia)
+    premia = wyczysc_dane(premia, 1)
     dzial = dane_z_pliku('dział.txt')
+    
+    print(premia)
     return 0
 
 if __name__ == '__main__':
