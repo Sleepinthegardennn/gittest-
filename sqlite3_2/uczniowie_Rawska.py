@@ -5,8 +5,34 @@
 
 import sqlite3
 
+def wyniki(cur):
+   wyniki = cur.fetchall() 
+   for row in wyniki:
+        print(tuple(row)) 
 
-
+def dodaj(cur):
+    cur.execute("""
+        INSERT INTO tbKlasy
+        VALUES (?, ?, ?, ?)
+    """,[None, '3C', 2015, 2017])
+    
+def aktualizuj(cur):
+    cur.execute("""
+        UPDATE tbKlasy
+        SET klasa = ?
+        WHERE idklasy = 1?
+    """,['3D', 13])
+    
+def usun(cur):
+    cur.execute('DELETE FROM tbKlasy WHERE klasa = ? AND roknaboru = ?', ['3B', 2015])
+    
+def aktualizuj2(cur):
+    cur.execute("""
+        UPDATE tbUczniowie
+        SET EgzJez = ?
+        WHERE nazwisko LIKE 'Dziedzic'
+    """,['Paulina Dziedzic' 35])
+    
 def kw_a(cur):# gdy """ """ przygotowanie zapytania
 
     cur.execute(""" 
@@ -75,8 +101,14 @@ def main(args):
     #kw_b(cur)
     #kw_c(cur)
     #kw_d(cur)
-    kw_e(cur)
+    #kw_e(cur)
     
+    #dodaj(cur)
+    #aktualizuj(cur)
+    #usun(cur)
+    aktualizuj2(cur)
+    con.commit()
+    wyniki(cur.execute('SELECT * FROM tbklasy'))
     
     return 0
 
