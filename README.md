@@ -1,0 +1,4 @@
+# gittest-
+Repozytorium testowe
+
+WITAM W NAJFAJNIEJSZYM REPOZYTORIUM ŚWIATAAAAA !
