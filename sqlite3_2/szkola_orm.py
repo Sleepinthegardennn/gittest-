@@ -16,6 +16,41 @@ class BazaModel(Model):  # klasa bazowa
     class Meta:
         database = baza
 
+class Klasa(BazaModel):
+    id = IntegerField(primary_key=True)
+    klasa = CharField(null=False)
+    rok_naboru = IntegerField(null=False)
+    rok_matury = IntegerField(null=False)
+
+class Przedmiot(BazaModel):
+    id = IntegerField(primary_key=True)
+    przedmiot = CharField(null=False)
+    nazwiskonaucz = CharField(null=False)
+    imienaucz = CharField(null=False)
+    plecnaucz = IntegerField(null=False)
+
+class Ocena(BazaModel):
+    id = IntegerField(primary_key=True)
+    datad = DateField(null=False)
+    uczen = IntegerField(null=True)
+    przedmiot = IntegerField(null=True)
+    ocena = DecimalField(null=True)
+    UczenID = ForeignKeyField(Uczen, related_name='szkola')
+    PrzedmiotID = ForeignKeyField(Przedmiot, related_name='szkola')
+
+class Uczen(BazaModel):
+    id = IntegerField(primary_key=True)
+    imie = CharField(null=False)
+    nazwisko = CharField(null=False)
+    plec = IntegerField(null=False)
+    klasa = IntegerField(null=True)
+    egzhum =
+    egzmat =
+    egzjez =
+    KlasaID = ForeignKeyField(Klasa, related_name='szkola')
+
+
+baza.connect()
 
 
 
