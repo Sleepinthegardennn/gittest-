@@ -1,4 +1,9 @@
 <!-- quiz-orm/templates/index.html -->
+{% extends "szkielet.html" %}
+{% set active_page = "index" %}
+{% block tytul %}Strona główna{% endblock%}
+{% block h1 %}Quiz ORM{% endblock%}
+{% block tresc %}
   <p>
     Aplikacja internetowa <i>Quiz</i> wykorzystująca framework
     <a href="http://flask.pocoo.org/">Flask</a>
@@ -14,3 +19,4 @@
       <li>i wiele innych rzeczy...</li>
     </ul>
   </p>
+{% endblock %}

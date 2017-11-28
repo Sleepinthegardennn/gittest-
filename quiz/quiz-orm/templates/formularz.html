@@ -1,0 +1,27 @@
+<!-- quiz-orm/templates/index.html -->
+{% extends "szkielet.html" %}
+{% set active_page = "index" %}
+{% block tytul %}Formularz testowy{% endblock%}
+{% block h1 %}Formularz{% endblock%}
+{% block tresc %}
+  <p>Podaj imię, nazwisko i wiek.</p>
+  <form method="POST">
+    <label>Imię:</label>
+    <input type="text" name="imie">
+    <br>
+    <label>Nazwisko:</label>
+    <input type="text" name="nazwisko">
+    <br>
+    <label>Wiek:</label>
+    <input type="text" name="wiek">
+    <br>
+    <input type="submit" value="Zapisz">
+  </form>
+
+  <ul>
+  {% for a in dane %}
+    <li>{{ a }}</li>
+  {% endfor %}
+  </ul>
+
+{% endblock %}
