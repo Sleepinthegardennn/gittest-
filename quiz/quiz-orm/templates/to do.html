@@ -1,0 +1,18 @@
+{% extends "szkielet.html" %}
+{% set active_page = "todo" %}
+{% block tytul %}lista zadan{% endblock%}
+{% block h1 %}Quiz ORM &#8211; dodawanie pytań{% endblock%}
+{% block tresc %}
+  {% include "pytanie_form.html" %}
+  <form method="POST" class="form-inline" action="">
+    {{ form.csrf_token }}
+
+    {{ form.pytanie.label }}<br>
+    {{ form.pytanie(class="form-control") }}<br>
+
+
+    <button type="submit" class="btn btn-default">Zapisz pytanie</button>
+  </form>
+
+
+{% endblock %}

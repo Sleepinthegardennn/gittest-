@@ -4,6 +4,7 @@
 from flask import render_template, request, redirect, url_for, abort, flash
 from app import app
 from models import Pytanie, Odpowiedz
+
 from forms import *
 
 
@@ -89,6 +90,7 @@ def dodaj():
 
     return render_template("dodaj.html", form=form, radio=list(form.odpok))
 
+
 def get_or_404(pid):
     """Pobranie i zwrócenie obiektu z bazy lub wywołanie szablonu 404.html"""
     try:
@@ -130,6 +132,7 @@ def edytuj(pid):
     form = DodajForm(obj=p)
     return render_template("edytuj.html", form=form, radio=list(form.odpok))
 
+
 @app.route('/usun/<int:pid>', methods=['GET', 'POST'])
 def usun(pid):
     """Usunięcie pytania o identyfikatorze pid"""
@@ -139,3 +142,9 @@ def usun(pid):
         p.delete_instance(recursive=True)
         return redirect(url_for('index'))
     return render_template("pytanie_usun.html", pytanie=p)
+
+
+@app.route('/todo', methods=['GET', 'POST'])
+def todo():
+    form = ToDoForm()
+    return render_template('todo.html', form=form)
