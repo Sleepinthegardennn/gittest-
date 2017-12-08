@@ -68,10 +68,10 @@
              </div>
 
              <div class="btn-group">
-                <button class="btn btn-primary" type="button" name="dodaj" onclick="dodaj();">DODAJ</button>
-                <button class="btn btn-primary" type="button" name="odejmij" onclick="odejmij();">ODEJMIJ</button>
-                <button class="btn btn-primary" type="button" name="pomnoz" onclick="pomnoz();">POMNOZ</button>
-                <button class="btn btn-primary" type="button" name="podziel" onclick="podziel();">PODZIEL</button>
+                <button class="btn btn-primary" type="button" id="dodaj">DODAJ</button>
+                <button class="btn btn-primary" type="button" id="odejmij">ODEJMIJ</button>
+                <button class="btn btn-primary" type="button" id="pomnoz">POMNOZ</button>
+                <button class="btn btn-primary" type="button" id="podziel">PODZIEL</button>
              </div>
 
              <hr>
@@ -105,30 +105,11 @@
 
 
     <script type="text/javascript">
-      function dodaj(){
-        liczba1 = parseInt(document.getElementById('liczba1').value);
-        liczba2 = parseInt(document.getElementById('liczba2').value);
-        //alert("Suma " + (liczba1 + liczba2));
-        document.getElementById("wynik").innerHTML = liczba1+liczba2;
-      }
-      function odejmij(){
-        liczba1 = parseInt(document.getElementById('liczba1').value);
-        liczba2 = parseInt(document.getElementById('liczba2').value);
-        //alert("Suma " + (liczba1 + liczba2));
-        document.getElementById('wynik').innerHTML = liczba1-liczba2;
-      }
-      function pomnoz(){
-        liczba1 = parseInt(document.getElementById('liczba1').value);
-        liczba2 = parseInt(document.getElementById('liczba2').value);
-        //alert("Suma " + (liczba1 + liczba2));
-        document.getElementById('wynik').innerHTML = liczba1*liczba2;
-      }
-      function podziel(){
-        liczba1 = parseInt(document.getElementById('liczba1').value);
-        liczba2 = parseInt(document.getElementById('liczba2').value);
-        //alert("Suma " + (liczba1 + liczba2));
-        document.getElementById('wynik').innerHTML = liczba1/liczba2;
-      }
+    $(document).ready(function(){
+      $("#dodaj").click(function(){
+        $("#wynik").text($(#"liczba1").val() + $("#liczba2").val());
+      });
+    });
 
     </script>
   </body>
