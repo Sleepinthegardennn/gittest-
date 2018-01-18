@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-18T11:58:26+01:00
+
+====== Obiekty ======
+Created czwartek 18 styczeń 2018
+
+== OPP - programowanie obiektowe ==
+
+klasa - szablon opisujacy obiet/schemat obiketu
+obiekt - instalacja klasy
+
+
+==== KLASA TO NOWY TYP DANYCH ====
+
+
+==== KONSTRUKTOR INICJUJE WARTOŚCI KLASY ====
