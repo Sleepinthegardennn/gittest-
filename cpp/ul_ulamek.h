@@ -3,6 +3,8 @@
  * metoda skracaj :
  * void skracaj() {}
  */
+#ifndef ULAMEK_H
+#define ULAMEK_H
 
 class Ulamek {
 private:
@@ -16,3 +18,4 @@ public:
     int get_m();
     void skracaj();
 };
+#endif

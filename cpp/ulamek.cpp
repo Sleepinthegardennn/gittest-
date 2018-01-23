@@ -28,11 +28,6 @@ public:
         return mianownik;
     }
 };
-    void skracaj();
-    
-void Ulamek::skracaj() {
-   ; //wykorzystaj algorytm Euklidesa optymalny
-}
 
 void Ulamek::zapisz(int l, int m){
     licznik =l;

@@ -7,52 +7,8 @@
 
 
 #include <iostream>
-
+#include "ul_ulamek.h"
 using namespace std;
-
-class Ulamek {
-private:
-    int licznik;
-    int mianownik;
-public:
-    Ulamek(int, int); //deklaracja konstruktora
-    void zapisz(int, int);
-    void wypisz() {
-        cout << licznik << "/" << mianownik;
-    }
-    
-    int get_l() {
-        return licznik;
-    }
-    int get_m() {
-        return mianownik;
-    }
-};
-    void skracaj();
-    
-void Ulamek::skracaj() {
-   ; //wykorzystaj algorytm Euklidesa optymalny
-}
-
-void Ulamek::zapisz(int l, int m){
-    licznik =l;
-    if(m !=0) mianownik = m;
-    else {
-        cout << "Pamietaj nie dziel przez zero";
-        exit(1);
-    }
-    
-}
-
-Ulamek::Ulamek(int l, int m){
-    licznik =l;
-    if(m !=0) mianownik = m;
-    else {
-        cout << "Pamietaj nie dziel przez zero";
-        exit(1);
-    }
-    
-}
 
 int main(int argc, char **argv)
 {
